@@ -1,0 +1,11 @@
+namePrefix: staging-
+namespace: staging
+commonLabels:
+  env: staging
+commonAnnotations:
+  note: Hello, I am staging!
+resources:
+- ../../base
+patches:
+- path: configmap.yaml
+- path: route.yaml

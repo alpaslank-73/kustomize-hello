@@ -1,0 +1,11 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: hello
+  labels:
+    app: hello
+spec:
+  host: staging-hello.apps.ocp4.example.com
+  to:
+    kind: Service
+    name: staging-hello-service

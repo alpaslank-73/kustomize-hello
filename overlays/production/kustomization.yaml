@@ -1,0 +1,12 @@
+namePrefix: production-
+namespace: production
+commonLabels:
+  env: production
+commonAnnotations:
+  note: Hello, I am production!
+resources:
+- ../../base
+patches:
+- path: configmap.yaml
+- path: deployment.yaml
+- path: route.yaml
