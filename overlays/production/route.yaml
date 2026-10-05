@@ -3,7 +3,7 @@ kind: Route
 metadata:
   name: hello
 spec:
-  host: hello.apps.ocp4.example.com
+  host: hello.apps.lab.example.com
   to:
     kind: Service
     name: production-hello-service

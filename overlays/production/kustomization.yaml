@@ -1,7 +1,5 @@
 namePrefix: production-
 namespace: production
-commonLabels:
-  env: production
 commonAnnotations:
   note: Hello, I am production!
 resources:
@@ -10,3 +8,9 @@ patches:
 - path: configmap.yaml
 - path: deployment.yaml
 - path: route.yaml
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+labels:
+- includeSelectors: true
+  pairs:
+    env: production

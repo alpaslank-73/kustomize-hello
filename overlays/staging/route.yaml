@@ -5,7 +5,7 @@ metadata:
   labels:
     app: hello
 spec:
-  host: staging-hello.apps.ocp4.example.com
+  host: staging-hello.apps.lab.example.com
   to:
     kind: Service
     name: staging-hello-service

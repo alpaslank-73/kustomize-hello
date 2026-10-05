@@ -1,7 +1,5 @@
 namePrefix: staging-
 namespace: staging
-commonLabels:
-  env: staging
 commonAnnotations:
   note: Hello, I am staging!
 resources:
@@ -9,3 +7,9 @@ resources:
 patches:
 - path: configmap.yaml
 - path: route.yaml
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+labels:
+- includeSelectors: true
+  pairs:
+    env: staging
